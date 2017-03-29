@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # dotfiles
 <<<<<<< HEAD
 All my dotfiles in one place
@@ -16,6 +17,9 @@ rofi screenshot:
 URxvt and Dunst screenshots (.Xresources):
 ![Xresources](Images/Notifiaction.png)
 =======
+=======
+# AntergOS-X
+>>>>>>> c25c0d76f4a13bf228737e381d2c6644130af603
 My OS-X like configuration. Made with MacOS-Sierra in mind.
 
 The startpage can be found [here](https://github.com/NerdyPepper/NerdyPepper.github.io). 
