@@ -1,5 +1,5 @@
-# dotfiles
-All my dotfiles in one place
+# SolaRice
+My main rice: A blend of Solarized Dark and Light
 
 i3 screenshots:
 
