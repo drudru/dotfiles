@@ -1,6 +1,13 @@
 # dotfiles
 My OS-X like configuration. Made with MacOS-Sierra in mind.
 
+The startpage can be found [here](https://github.com/NerdyPepper/NerdyPepper.github.io). 
+
+The GTK theme used is [OSx-Arc-Darker](https://github.com/LinxGem33/OSX-Arc-Darker) .
+
+Fonts are the ones used in MacOS-Yosemite-[San Francisco](https://github.com/supermarin/YosemiteSanFranciscoFont)
+
+
 # Screenshots
 
 1.Clean
@@ -15,6 +22,4 @@ My OS-X like configuration. Made with MacOS-Sierra in mind.
 4.Just another screenshot
 ![just_another](AntergOS-X_Images/just_another.png)
 
-The startpage can be found [here](https://github.com/NerdyPepper/NerdyPepper.github.io). 
-The GTK theme used is [OSx-Arc-Darker](https://github.com/LinxGem33/OSX-Arc-Darker) .
-Fonts are the ones used in MacOS-Yosemite-[San Francisco](https://github.com/supermarin/YosemiteSanFranciscoFont)
+
