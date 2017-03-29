@@ -1,4 +1,4 @@
-# dotfiles
+# AntergOS-X
 My OS-X like configuration. Made with MacOS-Sierra in mind.
 
 The startpage can be found [here](https://github.com/NerdyPepper/NerdyPepper.github.io). 
