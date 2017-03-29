@@ -19,12 +19,11 @@ offset-x = 0
 offset-y = 0
 
 locale = de_DE.UTF-8
+background = #99B2C7D2
+foreground = #000
 
-background = #002b36
-foreground = #93a1a1
-
-font-0 = NovaMono:weight = bold:size=9;0
-font-1 = FontAwesome:weight = bold :size=10;1
+font-0 = SFNS Display:weight = Ultralight:size=9;0
+font-1 = FontAwesome:weight = bold :size=9;1
 
 modules-left =  date
 modules-center = i3
@@ -34,6 +33,7 @@ tray-position = right
 tray-padding = 1
 tray-transparent = false
 tray-detached = false
+tray-background = #8CA3B9
 
 underline-size = 3
 
@@ -52,8 +52,8 @@ ramp-volume-0 = 
 ramp-volume-1 =  
 ramp-volume-2 = 
 
-format-volume-foreground = #b58900
-format-volume-background = #002b36
+format-volume-foreground = #000
+format-volume-background = #99B2C7D2
 
 label-muted = 🔇muted
 
@@ -63,7 +63,7 @@ type = internal/xwindow
 label = %title:0:30:...%
 module-margin-left = 2
 format-padding = 2
-format-background = #002b36
+format-background = #99B2C7D2
 
 [module/i3]
 type = internal/i3
@@ -72,26 +72,26 @@ enable-click = false
 index-sort = true
 format = <label-state>
 
-label-focused =  
-label-focused-foreground = #859900
-label-focused-background = #002b36
+label-focused =     
+label-focused-foreground = #000
+label-focused-background = #99B2C7D2
 label-focused-padding = 1
 
-label-unfocused =  
-label-unfocused-foreground = #859900
-label-unfocused-background = #002b36
+label-unfocused =    
+label-unfocused-foreground = #000
+label-unfocused-background = #99B2C7D2
 label-unfocused-padding = 1
 
-label-urgent = 
-label-urgent-foreground = #900000
-label-urgent-background = #002b36 
+label-urgent =   
+label-urgent-foreground = #000
+label-urgent-background = #99B2C7D2 
 label-urgent-padding = 1
 
 [module/date]
 type = internal/date
 interval = 1
-date = "%H:%M"
-date-alt = "%A, %d %B"
+date = "  %H:%M"
+date-alt = "  %A, %d %B"
 
 ;format = %date% 
 ;format-padding = 1
@@ -102,14 +102,14 @@ date-alt = "%A, %d %B"
 type = custom/menu
 
 label-open =  power
-label-open-foreground = #dc322f
-label-open-background = #002b36
+label-open-foreground = #000
+label-open-background = #99B2C7D2
 label-close =  cancel
-label-close-foreground = #dc322f
-label-close-background = #002b36
+label-close-foreground = #000
+label-close-background = #99B2C7D2
 label-separator = |
-label-separator-foreground = #a08c50
-label-separator-background = #002b36
+label-separator-foreground = #a7b0b2
+label-separator-background = #99B2C7D2
 
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1
