@@ -1,25 +1,6 @@
-<<<<<<< HEAD
-# dotfiles
-<<<<<<< HEAD
-All my dotfiles in one place
 
-i3 screenshots:
-
-  Clean:
-![Clean](Images/Clean.png)
-
-  Fake Busy:
-![Fake Busy](Images/FakeBusy.png)
-
-rofi screenshot:
-![rofi](Images/rofi.png)
-
-URxvt and Dunst screenshots (.Xresources):
-![Xresources](Images/Notifiaction.png)
-=======
-=======
 # AntergOS-X
->>>>>>> c25c0d76f4a13bf228737e381d2c6644130af603
+
 My OS-X like configuration. Made with MacOS-Sierra in mind.
 
 The startpage can be found [here](https://github.com/NerdyPepper/NerdyPepper.github.io). 
@@ -35,13 +16,13 @@ Fonts are the ones used in MacOS-Yosemite-[San Francisco](https://github.com/sup
 ![Clean](AntergOS-X_Images/clean.png)
 
 2.rofi: The blurred background must be set manually!
-![rofi](AntergOS-X_Images/rofi)
+![rofi](AntergOS-X_Images/rofi.png)
 
 3.Fake Busy
-![fake_busy](AntergOS-X_Images/2017-03-29-174830_1366x768_scrot.png)
+![fake_busy](AntergOS-X_Images/Busy.png)
 
 4.Just another screenshot
 ![just_another](AntergOS-X_Images/just_another.png)
 
-
->>>>>>> d1f93ffcd5f57fb0d050072669237167bb94a32f
+5.i3-lock
+![lock](AntergOS-X_Images/lock.png)
