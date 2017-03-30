@@ -8,13 +8,13 @@
 ;=====================================================
 
 [global/wm]
-margin-top = 5
+margin-top = 8
 margin-bottom = 2
 override-redirect = true
 
 [bar/top]
 width = 100% 
-height = 26
+height = 23
 offset-x = 0
 offset-y = 0
 
@@ -25,9 +25,9 @@ foreground = #000
 font-0 = SFNS Display:weight = Ultralight:size=10;0
 font-1 = FontAwesome:size=10;1
 
-modules-left = date
+modules-left = rofi
 modules-center = i3
-modules-right = volume powermenu
+modules-right = date volume powermenu
 
 tray-position = right
 tray-padding = 1
@@ -46,12 +46,12 @@ module-margin-right = 1
 [module/volume]
 type = internal/volume
 
-format-volume = <ramp-volume>
-module-margin-right = 1
+format-volume = <ramp-volume> <label-volume>|
+module-margin-right = 0
 
-ramp-volume-0 =  
-ramp-volume-1 =  
-ramp-volume-2 = 
+ramp-volume-0 = |  
+ramp-volume-1 = |  
+ramp-volume-2 = | 
 
 format-volume-foreground = #000
 format-volume-background = #99B2C7D2
@@ -91,8 +91,8 @@ label-urgent-padding = 1
 [module/date]
 type = internal/date
 interval = 1
-date = "  %H:%M"
-date-alt = "  %A, %d %B"
+date = " %A %H:%M"
+date-alt = " %d %B" 
 
 ;format = %date% 
 ;format-padding = 1
@@ -102,14 +102,14 @@ date-alt = "  %A, %d %B"
 [module/powermenu]
 type = custom/menu
 
-label-open =  
+label-open =power
 label-open-foreground = #000
 label-open-background = #99B2C7D2
 label-close =  cancel
-label-close-foreground = #000
+label-close-foreground = #dc322f
 label-close-background = #99B2C7D2
 label-separator = |
-label-separator-foreground = #a7b0b2
+label-separator-foreground = #222222
 label-separator-background = #99B2C7D2
 
 menu-0-0 = reboot
@@ -133,3 +133,13 @@ menu-3-0 = logout
 menu-3-0-exec = i3-msg exit
 menu-3-1 = cancel
 menu-3-1-exec = menu-open-0
+
+[module/rofi]
+type = custom/script
+exec = echo "       Finder"
+click-left = rofi -show run
+
+;[module/google_search]
+;type = custom/script
+;exec = echo ""
+;click-left = echo "" | rofi -dmenu -p "Search:" -font "lemon 7" -width 350 -location 3 -xoffset -192 -yoffset 18 | xargs -I{} xdg-open 
