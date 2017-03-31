@@ -13,16 +13,16 @@ Fonts are the ones used in MacOS-Yosemite-[San Francisco](https://github.com/sup
 # Screenshots
 
 1.Clean
-![Clean](AntergOS-X_Images/clean.png)
+![clean](AntergOS-X_Images/clean.png)
 
 2.rofi: The blurred background must be set manually!
 ![rofi](AntergOS-X_Images/rofi.png)
 
 3.Fake Busy
-![fake_busy](AntergOS-X_Images/Busy.png)
+![fake_busy](AntergOS-X_Images/busy.png)
 
 4.Just another screenshot
-![just_another](AntergOS-X_Images/just_another.png)
+![just_another](AntergOS-X_Images/coding.png)
 
 5.i3-lock
 ![lock](AntergOS-X_Images/lock.png)
