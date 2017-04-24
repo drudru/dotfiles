@@ -9,33 +9,33 @@
 
 [global/wm]
 margin-top = 8
-margin-bottom = 2
+margin-bottom = 0 
 override-redirect = true
 
 [bar/top]
-width = 100% 
+width = 1222
 height = 23
 offset-x = 0
 offset-y = 0
 
 locale = de_DE.UTF-8
-background = #99B2C7D2
-foreground = #000
+background = #292a44
+foreground = #678bdc
 
-font-0 = SFNS Display:weight = Ultralight:size=10;0
+font-0 = Monaco:size=9;0
 font-1 = FontAwesome:size=10;1
 
-modules-left = rofi
-modules-center = i3
-modules-right = date volume powermenu
+modules-left = powermenu date volume battery cpu 
+modules-center = 
+modules-right =  
 
-tray-position = right
+tray-position = left
 tray-padding = 1
-tray-transparent = false
+tray-transparent = false 
 tray-detached = false
-tray-background = #8CA3B9
+tray-background = #292a44
 
-underline-size = 3
+underline-size = 0 
 
 spacing = 1
 padding-left = 2
@@ -46,15 +46,16 @@ module-margin-right = 1
 [module/volume]
 type = internal/volume
 
-format-volume = <ramp-volume> <label-volume>|
+format-volume = <ramp-volume><label-volume> 
 module-margin-right = 0
 
-ramp-volume-0 = |  
-ramp-volume-1 = |  
-ramp-volume-2 = | 
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 =
+ramp-volume-3 =
 
-format-volume-foreground = #000
-format-volume-background = #99B2C7D2
+format-volume-foreground = #ffbc69
+format-volume-background = #292a44
 
 label-muted = 🔇muted
 
@@ -64,7 +65,7 @@ type = internal/xwindow
 label = %title:0:30:...%
 module-margin-left = 2
 format-padding = 2
-format-background = #99B2C7D2
+format-background = #292a44
 
 [module/i3]
 type = internal/i3
@@ -74,70 +75,105 @@ index-sort = true
 format = <label-state>
 
 label-focused =     
-label-focused-foreground = #000
-label-focused-background = #99B2C7D2
+label-focused-foreground = #678bdc
+label-focused-background = #292a44
 label-focused-padding = 1
 
 label-unfocused =    
-label-unfocused-foreground = #000
-label-unfocused-background = #99B2C7D2
+label-unfocused-foreground = #678bdc
+label-unfocused-background = #292a44
 label-unfocused-padding = 1
 
 label-urgent =   
-label-urgent-foreground = #000
-label-urgent-background = #99B2C7D2 
+label-urgent-foreground = #678bdc
+label-urgent-background = #292a44 
 label-urgent-padding = 1
 
 [module/date]
 type = internal/date
 interval = 1
-date = " %A %H:%M"
-date-alt = " %d %B" 
+date = " %A %I:%M"
+date-alt = " %d %B" 
 
-;format = %date% 
+
 ;format-padding = 1
 ;format-background = #7aa04b
-;format-foreground = #94a086
+format-foreground = #ed4781
 
 [module/powermenu]
 type = custom/menu
 
 label-open =power
-label-open-foreground = #000
-label-open-background = #99B2C7D2
-label-close =  cancel
-label-close-foreground = #dc322f
-label-close-background = #99B2C7D2
-label-separator = |
-label-separator-foreground = #222222
-label-separator-background = #99B2C7D2
+label-open-foreground = #678bdc
+label-open-background = #292a44
+label-close =cancel
+label-close-foreground = #e88e2c
+label-close-background = #292a44
+label-separator =|
+label-separator-foreground = #2de0a7
+label-separator-background = #292a44
 
-menu-0-0 = reboot
+menu-0-0 =reboot
 menu-0-0-exec = menu-open-1
-menu-0-1 = shutdown
+menu-0-1 =shutdown
 menu-0-1-exec = menu-open-2
-menu-0-2 = logout
+menu-0-2 =logout
 menu-0-2-exec = menu-open-3
 
-menu-1-0 = cancel
+menu-1-0 =cancel
 menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
+menu-1-1 =reboot
 menu-1-1-exec = systemctl reboot
 
-menu-2-0 = shutdown
+menu-2-0 =shutdown
 menu-2-0-exec = systemctl poweroff
-menu-2-1 = cancel
+menu-2-1 =cancel
 menu-2-1-exec = menu-open-0
 
-menu-3-0 = logout
-menu-3-0-exec = i3-msg exit
-menu-3-1 = cancel
+menu-3-0 =logout
+menu-3-0-exec = herbstclient quit 
+menu-3-1 =cancel
 menu-3-1-exec = menu-open-0
 
 [module/rofi]
 type = custom/script
 exec = echo "       Finder"
 click-left = rofi -show run
+
+[module/cpu]
+type = internal/cpu
+label =  %percentage-core1%%
+label-foreground = #ae81ff
+
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = BAT1
+adapter = ACAD
+poll-interval = 5
+
+format-charging = <animation-charging><label-charging>
+format-discharging = <ramp-capacity><label-discharging>
+label-charging =  %percentage%%
+label-charging-foreground = #2de0a7
+label-discharging = %percentage%%
+label-discharging-foreground = #2de0a7
+label-full = Fully charged
+ramp-capacity-foreground = #2de0a7
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+bar-capacity-width = 10
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = #2de0a7
+animation-charging-framerate = 750
+
 
 ;[module/google_search]
 ;type = custom/script
