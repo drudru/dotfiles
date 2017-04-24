@@ -1,28 +1,30 @@
 
-# AntergOS-X
+# Gloom
 
-My OS-X like configuration. Made with MacOS-Sierra in mind.
+My latest rice (as of 24/4/17).
 
-The startpage can be found [here](https://github.com/NerdyPepper/NerdyPepper.github.io). 
+Based off the syntax coloring theme for Atom - [Gloom](https://atom.io/themes/gloom).
 
-The GTK theme used is [OSx-Arc-Darker](https://github.com/LinxGem33/OSX-Arc-Darker) .
+Modified a bit by me, to go with the Pokemon - [Gloom](http://bulbapedia.bulbagarden.net/wiki/Gloom_(Pok%C3%A9mon)).
 
-Fonts are the ones used in MacOS-Yosemite-[San Francisco](https://github.com/supermarin/YosemiteSanFranciscoFont)
-
+Link to my Gloom startpage: [https://nerdypepper.github.io/](https://nerdypepper.github.io/)
 
 # Screenshots
 
 1.Clean
-![clean](AntergOS-X_Images/clean.png)
+![clean](Gloom_Images/Clean.png)
 
-2.rofi: The blurred background must be set manually!
-![rofi](AntergOS-X_Images/rofi.png)
+2.rofi
+![rofi](Gloom_Images/rofi.png)
 
-3.Fake Busy
-![fake_busy](AntergOS-X_Images/busy.png)
+3.Text editing
+![Text](Gloom_Images/Text)
 
-4.Just another screenshot
-![just_another](AntergOS-X_Images/coding.png)
+4.dunst and urxvt
+![dunst](Gloom_Images/dunst.png)
 
-5.i3-lock
-![lock](AntergOS-X_Images/lock.png)
+5.Cava and Wallpaper
+![cava](Gloom_Images/Cava.png)
+
+6.Startpage
+![startpage](Gloom_Images/Chromium.png)
