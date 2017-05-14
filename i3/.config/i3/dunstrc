@@ -1,5 +1,5 @@
 [global]
-    font = Monaco 9
+    font = Misc Tamsyn Regular 10
 
     # Allow a small subset of html markup in notifications and formats:
     #   <b>bold</b>
@@ -11,7 +11,7 @@
     # <http://developer.gnome.org/pango/stable/PangoMarkupFormat.html>.
     # If markup is not allowed, those tags will be stripped out of the
     # message.
-    allow_markup = yes
+    allow_markup = no
 
     # Treat incoming notifications as plain text
     plain_text = no
@@ -67,7 +67,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x5-30+30"
+    geometry = "300x5+30-30"
 
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
@@ -121,7 +121,7 @@
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 2
+    separator_height = 3
 
     # Padding between text and separator.
     padding = 8
@@ -155,8 +155,8 @@
     icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
 [frame]
-    width = 2
-    color = "#2de0a7"
+    width = 3
+    color = "#34365c"
 
 [shortcuts]
 
@@ -183,17 +183,17 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#292a44" 
-    foreground = "#2de0a7"
+    foreground = "#678bdc"
     timeout = 5
 
 [urgency_normal]
     background = "#292a44"
-    foreground = "#2de0a7"
+    foreground = "#678bdc"
     timeout = 5
 
 [urgency_critical]
     background = "#292a44"
-    foreground = "#2de0a7"
+    foreground = "#e72d2d"
     timeout = 5
 
 

@@ -13,35 +13,39 @@ margin-bottom = 0
 override-redirect = true
 
 [bar/top]
-width = 1222
+width = 80%
 height = 23
-offset-x = 0
-offset-y = 0
+offset-x =10%
+offset-y = 5
 
 locale = de_DE.UTF-8
-background = #292a44
+background = #3A3C66
 foreground = #678bdc
 
-font-0 = Monaco:size=9;0
-font-1 = FontAwesome:size=10;1
+font-0 = lucy tewii:size=12:antialias=false;1
+font-1 = FontAwesome:size=12:antialias=false;2
+font-2 = MaterialIcons-Regular:size=12:antialias=false;3
+font-3 = Misc Stlarch:size=12:antialias=false;4
 
-modules-left = powermenu date volume battery cpu 
-modules-center = 
-modules-right =  
+modules-left = text1 date1 text2 date2 volume battery cpu
+modules-center = hlws 
+modules-right = previous pauseplay next powermenu
 
 tray-position = left
 tray-padding = 1
-tray-transparent = false 
+tray-transparent = false
 tray-detached = false
-tray-background = #292a44
+tray-background = #3A3C66
+
+radius = 4
 
 underline-size = 0 
 
 spacing = 1
-padding-left = 2
-padding-right = 2
+padding-left = 1
+padding-right = 1
 module-margin-left = 1
-module-margin-right = 1
+module-margin-right = 0
 
 [module/volume]
 type = internal/volume
@@ -55,17 +59,16 @@ ramp-volume-2 =
 ramp-volume-3 =
 
 format-volume-foreground = #ffbc69
-format-volume-background = #292a44
+format-volume-background = #3A3C66
 
 label-muted = 🔇muted
-
 
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
 module-margin-left = 2
 format-padding = 2
-format-background = #292a44
+format-background = #00eeeeee
 
 [module/i3]
 type = internal/i3
@@ -76,69 +79,80 @@ format = <label-state>
 
 label-focused =     
 label-focused-foreground = #678bdc
-label-focused-background = #292a44
+label-focused-background = #00eeeeee
 label-focused-padding = 1
 
 label-unfocused =    
 label-unfocused-foreground = #678bdc
-label-unfocused-background = #292a44
+label-unfocused-background = #00eeeeee
 label-unfocused-padding = 1
 
 label-urgent =   
 label-urgent-foreground = #678bdc
-label-urgent-background = #292a44 
+label-urgent-background = #00eeeeee 
 label-urgent-padding = 1
 
-[module/date]
+[module/date1]
 type = internal/date
 interval = 1
-date = " %A %I:%M"
-date-alt = " %d %B" 
+date = "%I:%M"
+format-foreground = #ae81ff
 
+[module/date2]
+type = internal/date
+interval = 5
+date = "%A %b %m"
 
 ;format-padding = 1
 ;format-background = #7aa04b
-format-foreground = #ed4781
-
+format-foreground = #ff6f9f
 [module/powermenu]
 type = custom/menu
 
-label-open =power
-label-open-foreground = #678bdc
-label-open-background = #292a44
-label-close =cancel
+label-open =
+label-open-foreground = #ed4781
+label-open-background = #3A3C66
+label-close =
 label-close-foreground = #e88e2c
-label-close-background = #292a44
+label-close-background = #3A3C66
 label-separator =|
 label-separator-foreground = #2de0a7
-label-separator-background = #292a44
+label-separator-background = #3A3C66
 
-menu-0-0 =reboot
+menu-0-0 =
 menu-0-0-exec = menu-open-1
-menu-0-1 =shutdown
+menu-0-1 =
 menu-0-1-exec = menu-open-2
-menu-0-2 =logout
+menu-0-2 =
 menu-0-2-exec = menu-open-3
 
-menu-1-0 =cancel
+menu-1-0 =
 menu-1-0-exec = menu-open-0
-menu-1-1 =reboot
+menu-1-1 =
 menu-1-1-exec = systemctl reboot
 
-menu-2-0 =shutdown
+menu-2-0 =
 menu-2-0-exec = systemctl poweroff
-menu-2-1 =cancel
+menu-2-1 =
 menu-2-1-exec = menu-open-0
 
-menu-3-0 =logout
+menu-3-0 =
 menu-3-0-exec = herbstclient quit 
-menu-3-1 =cancel
+menu-3-1 =
 menu-3-1-exec = menu-open-0
-
 [module/rofi]
 type = custom/script
 exec = echo "       Finder"
 click-left = rofi -show run
+
+[module/hlws]
+type = custom/script
+exec = /home/nerdypepper/hlws
+
+scroll-up = exec herbstclient use_index +1
+scroll-down = exec herbstclient use_index -1
+label-margin-right = 5
+interval = 0.01
 
 [module/cpu]
 type = internal/cpu
@@ -155,11 +169,11 @@ poll-interval = 5
 format-charging = <animation-charging><label-charging>
 format-discharging = <ramp-capacity><label-discharging>
 label-charging =  %percentage%%
-label-charging-foreground = #2de0a7
+label-charging-foreground = #6df3df
 label-discharging = %percentage%%
-label-discharging-foreground = #2de0a7
+label-discharging-foreground = #6df3df
 label-full = Fully charged
-ramp-capacity-foreground = #2de0a7
+ramp-capacity-foreground = #6df3df
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
@@ -171,11 +185,61 @@ animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
-animation-charging-foreground = #2de0a7
+animation-charging-foreground = #6df3df
 animation-charging-framerate = 750
 
+[module/text1]
+type = "custom/script"
+format-text =<label>
+label =
+exec = echo label
+format-foreground = #ae81ff
+format-background = #3A3C66
 
-;[module/google_search]
-;type = custom/script
-;exec = echo ""
-;click-left = echo "" | rofi -dmenu -p "Search:" -font "lemon 7" -width 350 -location 3 -xoffset -192 -yoffset 18 | xargs -I{} xdg-open 
+
+[module/text2]
+type = custom/script
+format-text =<label>
+label =
+exec = echo label
+format-foreground = #ff6f9f
+format-background = #3A3C66
+
+[module/nightmode]
+type = custom/script
+echo = ""
+
+[module/music]
+type = custom/script
+interval = 0.01
+exec = python3 /home/nerdypepper/deadbeefplayer.py
+format-foreground = #2de0a7
+format-background = #3A3C66
+click-left = exec deadbeef --play-pause
+
+[module/previous]
+type = custom/script
+format-text = <label>
+label = 
+exec = echo label
+click-left = exec deadbeef --prev
+format-foreground = #2de0a7
+format-background = #3A3C66
+
+[module/next]
+type = custom/script
+format-text = <label>
+label = 
+exec = echo label
+click-left = exec deadbeef --next
+format-foreground = #2de0a7
+format-background = #3A3C66
+
+[module/pauseplay]
+type = custom/script
+format-text =  <label>
+label = 
+exec = echo label
+click-left = exec deadbeef --play-pause
+format-foreground = #2de0a7
+format-background = #3A3C66
