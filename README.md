@@ -17,7 +17,7 @@ Link to my Gloom startpage: [https://nerdypepper.github.io/](https://nerdypepper
 ![rofi](Gloom_Images/rofi.png)
 
 3.Text editing
-![Text](Gloom_Images/Text)
+![Text](Gloom_Images/Text.png)
 
 4.dunst and urxvt
 ![dunst](Gloom_Images/dunst.png)
