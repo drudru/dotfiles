@@ -15,8 +15,8 @@ override-redirect = true
 [bar/top]
 width = 80%
 height = 23
-offset-x =10%
-offset-y = 5
+offset-x = 10%
+offset-y = 7
 
 locale = de_DE.UTF-8
 background = #3A3C66
@@ -27,9 +27,9 @@ font-1 = FontAwesome:size=12:antialias=false;2
 font-2 = MaterialIcons-Regular:size=12:antialias=false;3
 font-3 = Misc Stlarch:size=12:antialias=false;4
 
-modules-left = text1 date1 text2 date2 volume battery cpu
+modules-left = date1 date2 volume battery cpu
 modules-center = hlws 
-modules-right = previous pauseplay next powermenu
+modules-right = previous music next powermenu
 
 tray-position = left
 tray-padding = 1
@@ -37,13 +37,16 @@ tray-transparent = false
 tray-detached = false
 tray-background = #3A3C66
 
-radius = 4
+overline-size = 2
+overline-color = #bc92f8
+underline-size = 2
+underline-color = #bc92f8
 
-underline-size = 0 
+radius = 2
 
 spacing = 1
 padding-left = 1
-padding-right = 1
+padding-right = 0
 module-margin-left = 1
 module-margin-right = 0
 
@@ -95,23 +98,28 @@ label-urgent-padding = 1
 [module/date1]
 type = internal/date
 interval = 1
-date = "%I:%M"
+date = " %I:%M"
 format-foreground = #ae81ff
+format-prefix = 
+
 
 [module/date2]
 type = internal/date
 interval = 5
-date = "%A %b %m"
-
+date = " %A %b %m"
 ;format-padding = 1
 ;format-background = #7aa04b
 format-foreground = #ff6f9f
+format-prefix =
+
 [module/powermenu]
 type = custom/menu
 
-label-open =
-label-open-foreground = #ed4781
-label-open-background = #3A3C66
+label-open =     
+label-open-padding-left = 1
+label-open-padding-right = 1
+label-open-foreground = #3A3C66
+label-open-background = #ed4781
 label-close =
 label-close-foreground = #e88e2c
 label-close-background = #3A3C66
@@ -168,33 +176,25 @@ poll-interval = 5
 
 format-charging = <animation-charging><label-charging>
 format-discharging = <ramp-capacity><label-discharging>
-label-charging =  %percentage%%
+label-charging = %percentage%%
 label-charging-foreground = #6df3df
 label-discharging = %percentage%%
 label-discharging-foreground = #6df3df
 label-full = Fully charged
 ramp-capacity-foreground = #6df3df
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+ramp-capacity-0 =
+ramp-capacity-1 =
+ramp-capacity-2 =
+ramp-capacity-3 =
+ramp-capacity-4 =
 bar-capacity-width = 10
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
 animation-charging-foreground = #6df3df
 animation-charging-framerate = 750
-
-[module/text1]
-type = "custom/script"
-format-text =<label>
-label =
-exec = echo label
-format-foreground = #ae81ff
-format-background = #3A3C66
 
 
 [module/text2]
@@ -212,17 +212,20 @@ echo = ""
 [module/music]
 type = custom/script
 interval = 0.01
-exec = python3 /home/nerdypepper/deadbeefplayer.py
+exec = python3 /home/nerdypepper/praghaplayer.py
 format-foreground = #2de0a7
 format-background = #3A3C66
-click-left = exec deadbeef --play-pause
+click-left = exec pragha -t
+click-right = exec pragha -x
+scroll-up = exec pragha -i
+scroll-down = exec pragha -d
 
 [module/previous]
 type = custom/script
 format-text = <label>
 label = 
 exec = echo label
-click-left = exec deadbeef --prev
+click-left = exec pragha -r
 format-foreground = #2de0a7
 format-background = #3A3C66
 
@@ -231,7 +234,7 @@ type = custom/script
 format-text = <label>
 label = 
 exec = echo label
-click-left = exec deadbeef --next
+click-left = exec pragha -n
 format-foreground = #2de0a7
 format-background = #3A3C66
 
