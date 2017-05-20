@@ -52,10 +52,3 @@ rofi.fullscreen: true
 rofi.width: 1920
 rofi.lines: 19
 
-Xft.dpi: 96
-Xft.antialias: true      
-Xft.hinting: true
-Xft.rgba: rgb 
-Xft.autohint: false
-Xft.hintstyle: hintslight
-Xft.lcdfilter: lcddefault
