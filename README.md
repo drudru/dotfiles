@@ -6,7 +6,7 @@ Based off the syntax coloring theme for Atom - [Gloom](https://atom.io/themes/gl
 
 Modified a bit by me, to go with the Pokemon - [Gloom](http://bulbapedia.bulbagarden.net/wiki/Gloom_(Pok%C3%A9mon)).
 
-Link to my Gloom startpage: [https://nerdypepper.github.io/](https://nerdypepper.github.io/)
+Link to my Gloom startpage: [https://nerdypepper.github.io/](https://nerdypepper.github.io/Gloom)
 
 # Screenshots
 
